@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> The Planning Paradise</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;1,300&family=Bad+Script&family=Dancing+Script:wght@700&family=Quicksand&display=swap" rel="stylesheet">
+   </head>
+<body>
+  <nav>
+    <div style="z-index: 1000;" class="nav-content">
+      <div class="logo">
+        <a href="#" style="font-family: 'Dancing Script', cursive; margin-left: -20px;">The Planning Paradise </a>
+    </div>
+        <ul class="nav-links" >
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <div class="dropdown-content">
+                    <!-- <a href="wedding.html">Wedding</a> -->
+                    <a href="decorators.html">Decoration</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="photography.html">Photography</a>
+                </div>
+            </li>
+            <li><a href="venue_main.html">Venue</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+      
+     
+           <a href="signup.html">  <button class="inline-flex text-white bg-orange-600 border-0 py-1 px-4 focus:outline-none hover:bg-orange-500 rounded text-lg" style="margin-right: -70px;">Signup</button> </a>
+           <a href="book_event.html">  <butto class="inline-flex text-white bg-orange-600 border-0 py-1 px-4 focus:outline-none hover:bg-orange-500 rounded text-lg" style="margin-right: -20px;" >Book Event</button> </a>
+</nav>
+<section class="home"></section>
+<script>
+    let nav = document.querySelector("nav");
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop > 20) {
+            nav.classList.add("sticky");
+        } else {
+            nav.classList.remove("sticky");
+        }
+    }
+</script>
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col">
+      <div class="h-1 bg-gray-200 rounded overflow-hidden">
+        <div class="w-24 h-full bg-yellow-500"></div>
+      </div>
+      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+        <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">The Planning Paradise</h1>
+        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">The Planning paradise is a platform where you can find all things at one place like managing different Events,Decoration and also Catering !</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <a href="photography.html">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://bestinau.com.au/wp-content/uploads/2018/01/backstage-2101255_1280-1024x680.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Photography</h2>
+        <p class="text-base leading-relaxed mt-2">
+          Discover The Planning Paradise, where we turn your wedding dreams into reality. From stunning venues to seamless coordination, we create unique and perfect weddings for your happily ever after.</p>
+                  <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      </a>
+      <a href="catering.html">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://www.fftcaters.com/blog/wp-content/uploads/2021/08/Peach-Tree-City-Catering-Company-1024x683.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Catering</h2>
+        <p class="text-base leading-relaxed mt-2">
+          The Planning Paradise, where delicious meets delightful for your events. Our team brings tasty food and top-notch service to make your special occasions memorable. !</p>
+        <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      </a>
+      <a href="decorators.html">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://5.imimg.com/data5/SELLER/Default/2023/2/YP/KB/MX/39997/hall-decorations-service-500x500.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Decoration</h2>
+        <p class="text-base leading-relaxed mt-2">THe Planning Paradise, Our team crafts enchanting atmospheres with beautiful decor, creating a magical backdrop for your special moments.</p>
+        <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="text-gray-600 body-font venues">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col">
+      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+        <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Different Events </h1>
+        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">The Planning paradise is a platform where you can find all things at one place like managing different Events,Decoration and also Catering !</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <a href="book_event.html">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://jannatevents.com/wp-content/uploads/2022/07/indian-weeding-organizers.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Wedding</h2>
+        <p class="text-base leading-relaxed mt-2">
+          Discover The Planning Paradise, where we turn your wedding dreams into reality. From stunning venues to seamless coordination, we create unique and perfect weddings for your happily ever after.</p>
+                  <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </a>
+    <a href="book_event.html">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="images/engagement.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Engagement</h2>
+        <p class="text-base leading-relaxed mt-2">
+          The Planning Paradise, where delicious meets delightful for your events. Our team brings tasty food and top-notch service to make your special occasions memorable. !</p>
+        <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </a>
+    <a href="book_event.html">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="images/birthday.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Birthday</h2>
+        <p class="text-base leading-relaxed mt-2">THe Planning Paradise, Our team crafts enchanting atmospheres with beautiful decor, creating a magical backdrop for your special moments.</p>
+        <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="text-gray-600 body-font venues">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col">
+      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+        <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Different Venues</h1>
+        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Different function halls in barshi city that provides great functionalitits and avaliable your Budget !</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="data:image/jpeg;base64,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">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Yash lawns</h2>
+        <p class="text-base leading-relaxed mt-2">
+          Discover The Planning Paradise, where we turn your wedding dreams into reality. From stunning venues to seamless coordination, we create unique and perfect weddings for your happily ever after.</p>
+                  <a class="text-yellow-500 inline-flex items-center mt-3">View More..
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://content.jdmagicbox.com/comp/pune/u9/020pxx20.xx20.161219182916.h6u9/catalogue/samruddhi-lawn-pune-q3pkslvmj4.jpg?clr=">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Samruddhi Function Hall</h2>
+        <p class="text-base leading-relaxed mt-2">
+          The Planning Paradise, where delicious meets delightful for your events. Our team brings tasty food and top-notch service to make your special occasions memorable. !</p>
+        <a class="text-yellow-500 inline-flex items-center mt-3">View More..
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden card">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://lh3.googleusercontent.com/p/AF1QipMnH4888BlFaNZIO2X1P7yozXEpLCgGwn2C314i=w1080-h608-p-no-v0">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Rukmini Lawns</h2>
+        <p class="text-base leading-relaxed mt-2">THe Planning Paradise, Our team crafts enchanting atmospheres with beautiful decor, creating a magical backdrop for your special moments.</p>
+        <a class="text-yellow-500 inline-flex items-center mt-3">View More..
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="text-gray-600 body-font features">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+      <img alt="feature" class="object-cover object-center h-full w-full" src="https://img.freepik.com/free-vector/business-professionals-working-startup_1262-20619.jpg">
+    </div>
+    <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+      <div class="flex flex-col mb-10 lg:items-start items-center">
+        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-5">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <div class="flex-grow">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-3"> Budget </h2>
+          <p class="leading-relaxed text-base">The Package is avaliable at your budget .There are different packages for all budget ranges . </p>
+          <!-- <a class="mt-3 text-yellow-500 inline-flex items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a> -->
+        </div>
+      </div>
+      <div class="flex flex-col mb-10 lg:items-start items-center">
+        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-5">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+          </svg>
+        </div>
+        <div class="flex-grow">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">24/7 Support</h2>
+          <p class="leading-relaxed text-base">Our chefs provide you the delicious food with your menu at very affordable price.</p>
+          <!-- <a class="mt-3 text-yellow-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a> -->
+        </div>
+      </div>
+      <div class="flex flex-col mb-10 lg:items-start items-center">
+        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-5">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="flex-grow">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Great Team</h2>
+          <p class="leading-relaxed text-base">The working team of our company is very dicepleaned and they have very experience .</p>
+          <!-- <a class="mt-3 text-yellow-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text-gray-600 body-font reviews">
+  <div class="container px-5 py-24 mx-auto ">
+    <h1 class="text-3xl font-medium title-font text-gray-900 mb-12 text-center" >HAPPY CLIENTS</h1>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-100 p-8 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+          </svg>
+          <p class="leading-relaxed mb-6">The Planning Paradise is a game-changer for event management! Navigating through their website was a breeze, and the seamless design reflects the expertise they bring to weddings. It's a one-stop-shop for turning dreams into reality.</p>
+          <a class="inline-flex items-center">
+            <img alt="testimonial" src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/passport/1-change1.jpg" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <span class="flex-grow flex flex-col pl-4">
+              <span class="title-font font-medium text-gray-900">Aditya Patil</span>
+              <span class="text-gray-500 text-sm">Customer</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-100 p-8 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+          </svg>
+          <p class="leading-relaxed mb-6">The PLanning Paradise's website is a feast for the eyes! Simple, intuitive, and filled with mouthwatering details about their services. Planning an event has never been this easy – their site is a true reflection of their commitment to excellence.</p>
+          <a class="inline-flex items-center">
+            <img alt="testimonial" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcm6NPgnBM-tCpq6ey8-0UhAC83M5faE17reg54aYhQ-VtJa7D4WIMfVIaoT-5ah7i_aQ&usqp=CAU" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <span class="flex-grow flex flex-col pl-4">
+              <span class="title-font font-medium text-gray-900">Durgesh Sarvade</span>
+              <span class="text-gray-500 text-sm">Customer</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="bg-gray-800 py-4 text-gray-400" style="background-color: #f7fafc; color: black;">
+    <div class="container px-4 mx-auto">
+      <div class="-mx-4 flex flex-wrap justify-between">
+        <div class="px-4 my-4 w-full xl:w-1/5">
+          <a href="/" class="block w-56 mb-10">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">The Planning Paradise</h2>
+            </div>
+          </a>
+          <p class="text-justify">
+            Discover The Planning Paradise, where we turn your wedding dreams into reality. we create unique and perfect weddings for your happily ever after.
+          </p>
+        </div>
+
+        <div class="px-4 my-4 w-full sm:w-auto">
+          <div>
+            <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Services</h2>
+          </div>
+          <ul class="leading-8">
+            <li><a href="decorators.html" class="hover:text-blue-400">Decoration</a></li>
+            <li><a href="photography.html" class="hover:text-blue-400">Photographers</a></li>
+            <li><a href="catering.html" class="hover:text-blue-400">Catering</a></li>
+            <li><a href="contact_us.html" class="hover:text-blue-400">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="px-4 my-4 w-full sm:w-auto">
+          <div>
+            <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Vendors</h2>
+          </div>
+          <ul class="leading-8">
+            <li><a href="kd_photography.html" class="hover:text-blue-400">Kanahaiya Damare Photograpgy</a></li>
+            <li><a href="decorators.html" class="hover:text-blue-400">Shubh Mangal Decoration</a></li>
+            <li><a href="mohan_caterers.html" class="hover:text-blue-400">Mohan Caterers</a></li>
+            <li><a href="" class="hover:text-blue-400">Yash Lawns ,barshi</a></li>
+
+          </ul>
+        </div>
+        <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+          <div>
+            <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Connect With Us</h2>
+          </div>
+          <a href="#"
+            class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <path
+                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+              </path>
+            </svg>
+          </a>
+          <a href="#"
+            class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+              </path>
+            </svg>
+          </a>
+          <a href="#"
+            class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+              </path>
+            </svg>
+          </a>
+          <a href="#"
+            class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+              <path
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+              </path>
+            </svg>
+          </a>
+          <a href="#"
+            class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400">
+            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path
+                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="bg-indigo-700 py-4 text-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="-mx-4 flex flex-wrap justify-between">
+        <div class="px-4 w-full text-center sm:w-auto sm:text-left">
+          <div class="text-center" style="margin-left: 415px;"> <!-- Centered container -->
+            <p>
+              Copyright © 2024 : The Planning Paradise. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</footer>
+</body>
+</html>

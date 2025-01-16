@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitin Caterers</title>
+  <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="tailwind.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;1,300&family=Bad+Script&family=Dancing+Script:wght@700&family=Quicksand&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: all 0.4s ease;
+      padding: 15px 20px;
+      background: white;
+      color: #000000;
+      height: 70px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+
+    }
+
+    nav.sticky {
+      padding: 15px 20px;
+      background: white;
+      height: 70px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav .nav-content {
+      height: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo a {
+      font-weight: 500;
+      font-size: 35px;
+      color: #6F4E37;
+      font-family: 'Dancing Script', cursive;
+      font-size: 50px;
+    }
+
+    nav.sticky .logo a {
+      color: #6F4E37;
+    }
+
+    .nav-content .nav-links {
+      display: flex;
+    }
+
+    .nav-content .nav-links li {
+      list-style: none;
+      margin: 0 8px;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 20px;
+      padding: 10px 10px;
+      transition: all 0.3s ease;
+      text-shadow: 1rem;
+    }
+
+    .nav-links .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .nav-links .dropdown-content a {
+      color: #000000;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .nav-links .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .nav-links li:hover .dropdown-content {
+      display: block;
+    }
+
+    .nav-links li a:hover {
+      color: rgb(0, 0, 0);
+    }
+
+    nav.sticky .nav-links li a {
+      color: #000000;
+    }
+
+    nav.sticky .nav-links li a:hover {
+      color: #0E2431;
+    }
+    .features {
+      margin-top: -150px;
+    }
+
+    .reviews {
+      margin-top: -150px;
+    }
+
+    .venues {
+      margin-top: -150px;
+    }
+
+    .foot {
+      margin-top: -75px;
+    }
+
+    .card {
+      overflow: hidden;
+    }
+
+    .card img {
+      transition: all 0.5s ease;
+
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+
+    }
+
+    .sec {
+      margin-top: 0px;
+    }
+
+    .top {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .top ul {
+      display: flex;
+      list-style: none;
+      margin-left: 130px;
+    }
+
+    .top ul li {
+      padding-left: 4px;
+    }
+    
+    #contactModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:transparent;
+            backdrop-filter: blur(5px);
+            color: black;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            font-size: 25px;
+
+        }
+
+        #closeModal {
+            cursor: pointer;
+            color: #444343;
+            font-size: 40px;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+        }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div style="z-index: 1000;" class="nav-content">
+      <div class="logo">
+        <a href="#" style="font-family: 'Dancing Script', cursive; margin-left: -20px;">The Planning Paradise </a>
+    </div>
+        <ul class="nav-links" style=" margin-right: 310px; " >
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <div class="dropdown-content">
+                    <!-- <a href="wedding.html">Wedding</a> -->
+                    <a href="decorators.html">Decoration</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="photography.html">Photography</a>
+                </div>
+            </li>
+            <li><a href="venue_main.html">Venue</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+      
+  </nav>
+  <section class="home"></section>
+  <script>
+    let nav = document.querySelector("nav");
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 20) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+  <section class="text-gray-600 body-font sec">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col">
+        <div class="h-1 bg-gray-200 rounded overflow-hidden">
+          <div class="w-24 h-full bg-yellow-500"></div>
+        </div>
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-3xl mb-2 sm:mb-0">Nitin Caterers</h1>
+          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Nitin Caterers And Events in Barshi, Solapur is a
+            top player in the STARTER Caterers in the Solapur. This well-known establishment acts as a one-stop
+            destination servicing customers both local and from other parts of Solapur.</p>
+        </div>
+      </div>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Starter</h1>
+
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font reviews">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="http://t0.gstatic.com/images?q=tbn:ANd9GcR6_PtUptj9Jxv-ePVzu5W2Y4jmP3I7vhpM2TJYSwBlzQY6jM4s">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STARTER</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Paneer Tikka</h2>
+            <p class="mt-1">₹90</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://static.toiimg.com/photo/photo/97163256/97163256.jpg?imgsize=76796">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STARTER</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Spring Rolls</h2>
+            <p class="mt-1">₹100</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="http://t2.gstatic.com/images?q=tbn:ANd9GcQL0B0f3j05S2dgnGQZWUWdA4-BdMmgF0kQXi1FHbwUPqtvGTqb">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STARTER</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mini Samosa</h2>
+            <p class="mt-1">₹25</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSbAohqd8r_A6_ZOJqBZ6ncEojz1bD6YH3FdCtl58K9jz2ZalG">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STARTER</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Dahi Vada</h2>
+            <p class="mt-1">₹40</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNSP0C8vh-BZqmhVCunJIypYhWYyHTwe24ZUbldWYmg&s">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STARTER</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Pani Poori</h2>
+            <p class="mt-1">₹20</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTN3YxnYn2_Ci08yQ73WFcezhmm1ALbTFKytVWIVP4FQuAzOCDf">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STARTER</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Dhokla</h2>
+            <p class="mt-1">₹70</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="data:image/jpeg;base64,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">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STARTER</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mini Kachori</h2>
+            <p class="mt-1">₹25</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="http://t1.gstatic.com/images?q=tbn:ANd9GcRIRDJIACxWuZmpkbhEiibEDF4NwGhS2Dx2rFYYRTAWo3SeUMbe">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STARTER</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Cheese Balls</h2>
+            <p class="mt-1">₹100</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font reviews">
+    <div class="container px-5 py-24 mx-auto">
+
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Main Course</h1>
+
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font reviews">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://i0.wp.com/cookingwithbry.com/wp-content/uploads/paneer-tikka-masala-recipe-2.png?fit=735%2C735&ssl=1">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Paneer tikka masala</h2>
+            <p class="mt-1">₹150</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://arpitasfoodpod.com/wp-content/uploads/2021/12/DB4B5F39-BCFC-489B-A98B-ED6EF4019C26.jpeg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Couorse</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Kaju Paneer Masala</h2>
+            <p class="mt-1">₹140</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://i0.wp.com/cookingfromheart.com/wp-content/uploads/2020/10/Kaju-Masala-1.jpg?resize=720%2C540&ssl=1">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Kaju Masala</h2>
+            <p class="mt-1">₹160</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://healthynibblesandbits.com/wp-content/uploads/2020/01/Saag-Paneer-FF.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Palak Paneer</h2>
+            <p class="mt-1">₹140</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://cookingfromheart.com/wp-content/uploads/2019/04/Restaurant-Style-Mixed-Veg-Gravy-1.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mix Veg</h2>
+            <p class="mt-1">₹120</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/potato-curry-aloo-curry.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Potatto</h2>
+            <p class="mt-1">₹130</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://glebekitchen.com/wp-content/uploads/2019/10/eggplantcurryfrontlow.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium"> Masala Baingan </h2>
+            <p class="mt-1">₹130</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://carveyourcraving.com/wp-content/uploads/2021/09/Best-Malai-Kofta-recipe-500x500.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Malai Kofta</h2>
+            <p class="mt-1">₹150</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="text-gray-600 body-font reviews">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/11/chapati-recipe-soft.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Chapati </h2>
+            <p class="mt-1">₹10</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://www.indianhealthyrecipes.com/wp-content/uploads/2023/09/tandoori-roti-recipe.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Couorse</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Roti</h2>
+            <p class="mt-1">₹15</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://www.indianveggiedelight.com/wp-content/uploads/2020/10/poori-recipe-featured.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Puri</h2>
+            <p class="mt-1">₹12</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRyZNJSohOOp73BdaqMlp9TcoYtrRGydaY0zVD_yPP9BdTGte8PTzOp7CY9m-LQd3budA&usqp=CAU">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Masala Puri</h2>
+            <p class="mt-1">₹15</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://d3cm4d6rq8ed33.cloudfront.net/media/navpravartakfiles/19/2ce4bee6-2e4c-477d-96d8-f4c7c7eaff0c.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Plain Rice</h2>
+            <p class="mt-1">₹120</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://myfoodstory.com/wp-content/uploads/2018/07/Perfect-Jeera-Rice-Indian-Cumin-Rice-4-500x375.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Jeera Rice</h2>
+            <p class="mt-1">₹130</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://assets.bonappetit.com/photos/6310fba2047f39a03a13b825/1:1/w_4118,h_4118,c_limit/0901-masala-fried-rice-lede.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Masala Rice </h2>
+            <p class="mt-1">₹140</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2017/0-Archana/4-Chettinad_Veg_Pulao_Recipe_Figaro_Pure_Olive_Oil-1.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Main Course</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Pulav</h2>
+            <p class="mt-1">₹150</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font reviews">
+    <div class="container px-5 py-24 mx-auto">
+
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Sweet Dishes</h1>
+
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font reviews">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://cdn0.weddingwire.in/article/1830/original/1280/jpg/60381-types-of-sweets-ruchi-s-kitchen-jalebi.jpeg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Sweet Dish</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Jalebi</h2>
+            <p class="mt-1">₹50</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQjwWODTSUTA8sLW5oO4mWnxhU_-ZkQ9Nk6I0i_Ab1hBrjErGYw55tGX6hDVqxISd5r">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Sweet Dish</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Gulab jamaun</h2>
+            <p class="mt-1">₹40</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://www.kashmironlinestore.com/cdn/shop/articles/Untitled_design_54_800x.jpg?v=1692702218">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Sweet Dish</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Rasmalai</h2>
+            <p class="mt-1">₹60</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://www.cookingcarnival.com/wp-content/uploads/2022/03/Angoor-rabdi-8.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Sweet Dish</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Angur Rabdi</h2>
+            <p class="mt-1">₹65</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg/1200px-Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Sweet Dish</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Ice Cream</h2>
+            <p class="mt-1">₹50</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://img-global.cpcdn.com/recipes/038faefc8b3084ad/1200x630cq70/photo.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Sweet Dish</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Sitafal Rabdi</h2>
+            <p class="mt-1">₹70</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://www.heritagefoods.in/blog/wp-content/uploads/2021/08/Amrakhand.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Sweet Dish</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Amrakhand</h2>
+            <p class="mt-1">₹50</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://myfoodstory.com/wp-content/uploads/2022/08/Coconut-Barfi-4-1.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Sweet Dish</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Barfi</h2>
+            <p class="mt-1">₹40</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font reviews">
+    <div class="container px-5 py-24 mx-auto">
+
+      <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              class="text-red-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Veg & Nonveg</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              class="text-red-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Min Order 150 plates</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              class="text-red-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Avg Veg plate ₹250</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              class="text-red-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Max Order 2000 plates</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              class="text-red-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Starting nonveg plate ₹400</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              class="text-red-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Experiance 2016</span>
+          </div>
+        </div>
+        
+        <button class="flex mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onclick="display()">Contact Us</button>
+        <div id="contactModal">
+          <div class="modal-content">
+              <span id="closeModal" onclick="closeContactModal()">&times;</span>
+              <p>Contact Number: <strong>09980129466</strong></p>
+          </div>
+      </div>
+      </div>
+
+    </div>
+    <script>
+      function display() {
+          document.getElementById('contactModal').style.display = 'flex';
+
+      }
+  
+      function closeContactModal() {
+          document.getElementById('contactModal').style.display = 'none';
+      }
+  </script>
+  </section>
+  <h1 class="text-4xl font-medium title-font text-gray-900 mb-12 text-center"
+    style="margin-top: -50px; margin-bottom: 80px;">Our Customers Says</h1>
+  <!-- reviews  -->
+  <section class="text-gray-600 body-font sections reviews">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial"
+              class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+              src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/passport/1-change1.jpg">
+            <div class="top">
+
+              <ul>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+
+                <li><i class="fa-regular fa-star"></i></li>
+              </ul>
+            </div>
+            <p class="leading-relaxed">I just wanted to thank you so much for everything. I have not gotten so many
+              compliments on the food. So I just wanted to tell you that a lot of people took your information and I
+              hope you get some business from it. I just wanted to thank you my daughter thought it was the best thing
+              she's ever tasted. I wanted to personally say thank you!.</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Prajwal Jadhav </h2>
+
+          </div>
+        </div>
+        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial"
+              class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6b24-e3KD0Oa9XMUHvMpUgxHHga-siKBWmMEDf6W-1OFYCgUPYBi8QnfLvg8J8toI7Es&usqp=CAU">
+            <div class="top">
+
+              <ul>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+
+                <li><i class="fa-regular fa-star"></i></li>
+              </ul>
+            </div>
+            <p class="leading-relaxed">I just wanted to thank you so much for everything. I have not gotten so many
+              compliments on the food. So I just wanted to tell you that a lot of people took your information and I
+              hope you get some business from it. I just wanted to thank you my daughter thought it was the best thing
+              she's ever tasted. I wanted to personally say thank you!</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">K.P.Ravat</h2>
+
+          </div>
+        </div>
+        <div class="lg:w-1/3 lg:mb-0 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial"
+              class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcm6NPgnBM-tCpq6ey8-0UhAC83M5faE17reg54aYhQ-VtJa7D4WIMfVIaoT-5ah7i_aQ&usqp=CAU">
+            <div class="top">
+
+              <ul>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+
+                <li><i class="fa-regular fa-star"></i></li>
+              </ul>
+            </div>
+            <p class="leading-relaxed">We used Spoonboon Catering for our wedding in Dec. for 300 guests. Team Spoonboon
+              worked with us over the course of our planning and listened carefully to our needs and the dietary
+              requirements of our guests to ensure a fabulous menu was created which took full advantage of seasonal
+              produce and stunned our guests.   Highly recommended.</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Sunita Sharma</h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="bg-gray-800 py-4 text-gray-400" style="background-color: #f7fafc; color: black;">
+      <div class="container px-4 mx-auto">
+        <div class="-mx-4 flex flex-wrap justify-between">
+          <div class="px-4 my-4 w-full xl:w-1/5">
+            <a href="/" class="block w-56 mb-10">
+              <div>
+                <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">The Planning Paradise</h2>
+              </div>
+            </a>
+            <p class="text-justify">
+              Discover The Planning Paradise, where we turn your wedding dreams into reality. we create unique and perfect weddings for your happily ever after.
+            </p>
+          </div>
+
+          <div class="px-4 my-4 w-full sm:w-auto">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Services</h2>
+            </div>
+            <ul class="leading-8">
+              <li><a href="decorators.html" class="hover:text-blue-400">Decoration</a></li>
+              <li><a href="photography.html" class="hover:text-blue-400">Photographers</a></li>
+              <li><a href="catering.html" class="hover:text-blue-400">Catering</a></li>
+              <li><a href="contact_us.html" class="hover:text-blue-400">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="px-4 my-4 w-full sm:w-auto">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Vendors</h2>
+            </div>
+            <ul class="leading-8">
+              <li><a href="kd_photography.html" class="hover:text-blue-400">Kanahaiya Damare Photograpgy</a></li>
+              <li><a href="decorators.html" class="hover:text-blue-400">Shubh Mangal Decoration</a></li>
+              <li><a href="mohan_caterers.html" class="hover:text-blue-400">Mohan Caterers</a></li>
+              <li><a href="" class="hover:text-blue-400">Yash Lawns ,barshi</a></li>
+
+            </ul>
+          </div>
+          <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Connect With Us</h2>
+            </div>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="bg-indigo-700 py-4 text-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="-mx-4 flex flex-wrap justify-between">
+          <div class="px-4 w-full text-center sm:w-auto sm:text-left">
+            <div class="text-center" style="margin-left: 415px;"> <!-- Centered container -->
+              <p>
+                Copyright © 2024 : The Planning Paradise. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+
+</html>

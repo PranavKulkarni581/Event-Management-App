@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar lokhande Photography</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;1,300&family=Bad+Script&family=Dancing+Script:wght@700&family=Quicksand&display=swap" rel="stylesheet">
+    <style>
+         
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Ubuntu', sans-serif;
+  }
+
+  nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      padding: 20px;
+      transition: all 0.4s ease;
+  }
+
+  nav.sticky {
+      padding: 15px 20px;
+      background: white;
+      height: 70px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav .nav-content {
+      height: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  nav .logo a {
+      font-weight: 500;
+      font-size: 35px;
+      color: #ffffff;
+      font-family: 'Dancing Script', cursive;
+      font-size: 50px;
+  }
+
+  nav.sticky .logo a {
+      color: #6F4E37;
+  }
+
+  .nav-content .nav-links {
+      display: flex;
+  }
+
+  .nav-content .nav-links li {
+      list-style: none;
+      margin: 0 8px;
+  }
+
+  .nav-links li {
+      position: relative;
+  }
+
+  .nav-links li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 10px;
+      transition: all 0.3s ease;
+      text-shadow: 1rem;
+  }
+
+  .nav-links .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+  }
+
+  .nav-links .dropdown-content a {
+      color: #000000;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+  }
+
+  .nav-links .dropdown-content a:hover {
+      background-color: #f1f1f1;
+  }
+
+  .nav-links li:hover .dropdown-content {
+      display: block;
+  }
+
+  .nav-links li a:hover {
+      color: rgb(0, 0, 0);
+  }
+
+  nav.sticky .nav-links li a {
+      color: #000000;
+  }
+
+  nav.sticky .nav-links li a:hover {
+      color: #0E2431;
+  }
+
+  .home {
+      height: 900px;
+      width: 100%;
+      background: url("images/sagar2.jpeg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+  }
+  .features{
+  margin-top: -150px;
+}
+.reviews{
+  margin-top:-150px;
+}
+.venues{
+  margin-top:-150px;
+}
+.foot{
+  margin-top:-75px;
+}
+.card{
+  overflow: hidden;
+}
+.sections{
+  margin-top: -100px;
+}
+.card img{
+  transition: all 0.5s ease;
+
+}
+.card:hover img{
+  transform: scale(1.1);
+  
+}
+hr{
+  color:#000000;
+}
+    </style>
+    </style>
+</head>
+<body>
+  <nav>
+    <div style="z-index: 1000;" class="nav-content">
+      <div class="logo">
+        <a href="#" style="font-family: 'Dancing Script', cursive; margin-left: -20px;">The Planning Paradise </a>
+    </div>
+        <ul class="nav-links" style=" margin-right: 310px; " >
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <div class="dropdown-content">
+                    <!-- <a href="wedding.html">Wedding</a> -->
+                    <a href="decorators.html">Decoration</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="photography.html">Photography</a>
+                </div>
+            </li>
+            <li><a href="venue_main.html">Venue</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+      
+  </nav>
+    <section class="home"></section>
+    <script>
+        let nav = document.querySelector("nav");
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 20) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        }
+    </script>
+
+
+ 
+
+<!-- photo gallary of wedding -->
+
+  <section class="text-gray-600 body-font ">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex w-full mb-20 flex-wrap">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Weddings By Sagar Lokhande Photography</h1>
+        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Here you can see the some of the  photographs of Wedding by Barshi's top photographer RS Photography. He provides the top quality of photos !</p>
+      </div>
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/1.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/2.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/kd/4.jpg">
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/kd/5.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/3.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/8.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- photo gallary of baby shoot  -->
+
+  <section class="text-gray-600 body-font sections">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex w-full mb-20 flex-wrap">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Pre Wedding  By Sagar Lokhande Photography </h1>
+        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Here you can see the some of the  photographs of Pre-Wedding by Barshi's top photographer Sagar Lokhande Photography. He provides the top quality of photos !</p>
+      </div>
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/11.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/14.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/kd/13.jpg">
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/kd/12.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/15.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/16.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- photo gallary of pre wedding  -->
+
+  <section class="text-gray-600 body-font sections">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex w-full mb-20 flex-wrap">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Babyshoot By Sagar Lokhande Photography</h1>
+        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Here you can see the some of the  photographs of Babyshoot by Barshi's top photographer Sagar Lokhande Photography. He provides the top quality of photos !</p>
+      </div>
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/21.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/23.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/kd/22.jpg">
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/kd/25.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/24.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/kd/26.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="text-gray-600 body-font sections">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+        <img class="object-cover object-center rounded" alt="hero" src="images/sagar1.jpg">
+      </div>
+      <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Sagar Lokhande Photography,Barshi</h1>
+        <p class="mb-8 leading-relaxed">WEDDING PHOTOGRAPHY <br>  Rs.12500/day <hr> PRE-WEDDING PHOTOGRAPHY <br>  Rs.11000/day <hr> <br> BABYSHOOT  <br>  Rs.5000/day <hr><br> PHOTO ALBUM <br> on request <br> <br></p>
+        <div class="flex w-full md:justify-start justify-center items-end">
+          <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4">
+            <label for="hero-field" class="leading-7 text-sm text-gray-600">Enter Email </label>
+            <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <button class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Enquiry Us</button>
+        </div>
+         <br>
+        <div class="flex lg:flex-row md:flex-col">
+          <a href="https://www.instagram.com/sagar_lokhande_photography/">
+          <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram w-6 h-6 " viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+            </svg>
+            <span class="ml-4 flex items-start flex-col leading-none">
+              <span class="text-xs text-gray-600 mb-1">CATCH US ON</span>
+              <span class="title-font font-medium">Instagram</span>
+            </span>
+          </button> </a>
+          <a href="https://www.facebook.com/p/Sagar-lokhande-photography-100063939889381/">
+           
+          <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook h-6 w-6" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+            <span class="ml-4 flex items-start flex-col leading-none">
+              <span class="text-xs text-gray-600 mb-1">CATCH US ON </span>
+              <span class="title-font font-medium">Facebook</span>
+            </span>
+          </button> </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- reviews  -->
+<section class="text-gray-600 body-font sections">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/passport/1-change1.jpg">
+            <p class="leading-relaxed">Sagar Lokhande Photography take our engagement pictures taken by KD with Life Writing Photography.They all turned out beautifully! Each picture perfectly captured the emotion of the day! You will absolutely love your experience with Sagar Lokhande Photography! I can't wait to use Life Writing Photography again! BEST around!</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Prajwal Jadhav </h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6b24-e3KD0Oa9XMUHvMpUgxHHga-siKBWmMEDf6W-1OFYCgUPYBi8QnfLvg8J8toI7Es&usqp=CAU">
+            <p class="leading-relaxed">Sagar Lokhande Photography did our engagement and wedding photos and she was amazing! She is super fun to work with and helps you relax for the camera. She also really knows what she is doing and takes awesome pictures. The photos were so good, we have them up all over our apartment. We could not have been happier with our experience..</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Atharve Bobe</h2>
+           
+          </div>
+        </div>
+        <div class="lg:w-1/3 lg:mb-0 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcm6NPgnBM-tCpq6ey8-0UhAC83M5faE17reg54aYhQ-VtJa7D4WIMfVIaoT-5ah7i_aQ&usqp=CAU">
+            <p class="leading-relaxed">Sagar Lokhande Photography did our engagement and wedding photos and she was amazing! he is super fun to work with and helps you relax for the camera. She also really knows what she is doing and takes awesome pictures. The photos were so good, we have them up all over our apartment. We could not have been happier with our experience.</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Niket Nannaware</h2>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer  -->
+  
+  <footer>
+    <div class="bg-gray-800 py-4 text-gray-400" style="background-color: #f7fafc; color: black;">
+      <div class="container px-4 mx-auto">
+        <div class="-mx-4 flex flex-wrap justify-between">
+          <div class="px-4 my-4 w-full xl:w-1/5">
+            <a href="/" class="block w-56 mb-10">
+              <div>
+                <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">The Planning Paradise</h2>
+              </div>
+            </a>
+            <p class="text-justify">
+              Discover The Planning Paradise, where we turn your wedding dreams into reality. we create unique and perfect weddings for your happily ever after.
+            </p>
+          </div>
+
+          <div class="px-4 my-4 w-full sm:w-auto">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Services</h2>
+            </div>
+            <ul class="leading-8">
+              <li><a href="decorators.html" class="hover:text-blue-400">Decoration</a></li>
+              <li><a href="photography.html" class="hover:text-blue-400">Photographers</a></li>
+              <li><a href="catering.html" class="hover:text-blue-400">Catering</a></li>
+              <li><a href="contact_us.html" class="hover:text-blue-400">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="px-4 my-4 w-full sm:w-auto">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Vendors</h2>
+            </div>
+            <ul class="leading-8">
+              <li><a href="kd_photography.html" class="hover:text-blue-400">Kanahaiya Damare Photograpgy</a></li>
+              <li><a href="decorators.html" class="hover:text-blue-400">Shubh Mangal Decoration</a></li>
+              <li><a href="mohan_caterers.html" class="hover:text-blue-400">Mohan Caterers</a></li>
+              <li><a href="" class="hover:text-blue-400">Yash Lawns ,barshi</a></li>
+
+            </ul>
+          </div>
+          <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Connect With Us</h2>
+            </div>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="bg-indigo-700 py-4 text-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="-mx-4 flex flex-wrap justify-between">
+          <div class="px-4 w-full text-center sm:w-auto sm:text-left">
+            <div class="text-center" style="margin-left: 415px;"> <!-- Centered container -->
+              <p>
+                Copyright © 2024 : The Planning Paradise. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+</html>

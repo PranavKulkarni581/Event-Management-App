@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering</title>
+     <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+     <link rel="stylesheet" href="tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;1,300&family=Bad+Script&family=Dancing+Script:wght@700&family=Quicksand&display=swap" rel="stylesheet">
+
+    <style>
+          /* Google Font Link */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Ubuntu', sans-serif;
+  }
+
+  nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      padding: 20px;
+      transition: all 0.4s ease;
+  }
+
+  nav.sticky {
+      padding: 15px 20px;
+      background: white;
+      height: 70px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  nav .nav-content {
+      height: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  nav .logo a {
+      font-weight: 500;
+      font-size: 35px;
+      color: #ffffff;
+      font-family: 'Dancing Script', cursive;
+      font-size: 50px;
+  }
+
+  nav.sticky .logo a {
+      color: #6F4E37;
+  }
+
+  .nav-content .nav-links {
+      display: flex;
+      /* margin-right: 310px; */
+  }
+
+  .nav-content .nav-links li {
+      list-style: none;
+      margin: 0 8px;
+      
+  }
+
+  .nav-links li {
+      position: relative;
+  }
+
+  .nav-links li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 10px;
+      transition: all 0.3s ease;
+      text-shadow: 1rem;
+  }
+
+  .nav-links .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+  }
+
+  .nav-links .dropdown-content a {
+      color: #000000;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+  }
+
+  .nav-links .dropdown-content a:hover {
+      background-color: #f1f1f1;
+  }
+
+  .nav-links li:hover .dropdown-content {
+      display: block;
+  }
+
+  .nav-links li a:hover {
+      color: rgb(0, 0, 0);
+  }
+
+  nav.sticky .nav-links li a {
+      color: #000000;
+  }
+
+  nav.sticky .nav-links li a:hover {
+      color: #0E2431;
+  }
+
+  .home {
+      height: 700px;
+      width: 100%;
+        background: url("images/cat2.jpg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+  }
+  .features{
+  margin-top: -150px;
+}
+.reviews{
+  margin-top:-150px;
+}
+.venues{
+  margin-top:-150px;
+}
+.foot{
+  margin-top:-75px;
+}
+.card{
+  overflow: hidden;
+}
+.card img{
+  transition: all 0.5s ease;
+
+}
+.card:hover img{
+  transform: scale(1.1);
+  
+}
+    </style>
+</head>
+<body>
+   <nav>
+      <div style="z-index: 1000;" class="nav-content">
+        <div class="logo">
+          <a href="#" style="font-family: 'Dancing Script', cursive; margin-left: -20px;">The Planning Paradise </a>
+      </div>
+          <ul class="nav-links" style=" margin-right: 310px;" >
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                  <a href="#">Services</a>
+                  <div class="dropdown-content">
+                      <!-- <a href="wedding.html">Wedding</a> -->
+                      <a href="decorators.html">Decoration</a>
+                      <a href="catering.html">Catering</a>
+                      <a href="photography.html">Photography</a>
+                  </div>
+              </li>
+              <li><a href="venue_main.html">Venue</a></li>
+              <li><a href="contact_us.html">Contact</a></li>
+          </ul>
+        
+    </nav>
+    <section class="home"></section>
+    <script>
+        let nav = document.querySelector("nav");
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 20) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        }
+    </script>
+   <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col">
+        <div class="h-1 bg-gray-200 rounded overflow-hidden">
+          <div class="w-24 h-full bg-yellow-500"></div>
+        </div>
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Catering & Food</h1>
+          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">The Planning paradise is a platform where you can find all the services including catering that tests is delicious and affordable in your price !</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+        <a href="mohan_caterers.html">
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden card">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://img.freepik.com/premium-photo/food-buffet-catering-dining-eating-party-sharing-concept_53876-27580.jpg?w=1060">
+          </div>
+          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Mohan Caterers </h2>
+          <p class="text-base leading-relaxed mt-2">Discover culinary delight with Mohan Caterers , offering Barshi's finest flavors in every dish. From traditional favorites to modern marvels, their catering brings joy to every event, leaving taste buds tingling and guests smiling.</p>
+                    <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        </a>
+        <a href="anandi_caterers.html">
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden card">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://img.freepik.com/free-photo/side-lamb-ragout-with-fried-onion-carrot-tomato-sauce-greens-vegetable-salad-table_141793-4744.jpg?w=1060&t=st=1704182967~exp=1704183567~hmac=c3e941c7beee1765cfbe359fbfb6508e56ea7a62eacc869dfb3977d12d6a6b31">
+          </div>
+          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Anandi Caterers</h2>
+          <p class="text-base leading-relaxed mt-2">Indulge in the delicious creations of Anandi Caterers, where Barshi's culinary heritage meets innovation. With a passion for quality and taste, their catering brings joy to every event, leaving taste buds tingling and guests smiling.</p>
+          <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        </a>
+        <a href="nitin_caterers.html">
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden card">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://as2.ftcdn.net/v2/jpg/00/77/99/99/1000_F_77999919_gxVjTCcUG9mecNlKJ7EehjcyJs0BcBu9.jpg">
+          </div>
+          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Nitin Caterers</h2>
+          <p class="text-base leading-relaxed mt-2">Experience the magic of Nitin Caterers's cuisine, a celebration of Barshi's rich culinary traditions. From savory to sweet, their expertly crafted menus cater to every palate, ensuring unforgettable dining experiences for all occasions.</p>
+          <a class="text-yellow-500 inline-flex items-center mt-3">Explore
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+ 
+
+
+
+  
+  <footer>
+    <div class="bg-gray-800 py-4 text-gray-400" style="background-color: #f7fafc; color: black;">
+      <div class="container px-4 mx-auto">
+        <div class="-mx-4 flex flex-wrap justify-between">
+          <div class="px-4 my-4 w-full xl:w-1/5">
+            <a href="/" class="block w-56 mb-10">
+              <div>
+                <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">The Planning Paradise</h2>
+              </div>
+            </a>
+            <p class="text-justify">
+              Discover The Planning Paradise, where we turn your wedding dreams into reality. we create unique and perfect weddings for your happily ever after.
+            </p>
+          </div>
+
+          <div class="px-4 my-4 w-full sm:w-auto">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Services</h2>
+            </div>
+            <ul class="leading-8">
+              <li><a href="decorators.html" class="hover:text-blue-400">Decoration</a></li>
+              <li><a href="photography.html" class="hover:text-blue-400">Photographers</a></li>
+              <li><a href="catering.html" class="hover:text-blue-400">Catering</a></li>
+              <li><a href="contact_us.html" class="hover:text-blue-400">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="px-4 my-4 w-full sm:w-auto">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Vendors</h2>
+            </div>
+            <ul class="leading-8">
+              <li><a href="kd_photography.html" class="hover:text-blue-400">Kanahaiya Damare Photograpgy</a></li>
+              <li><a href="decorators.html" class="hover:text-blue-400">Shubh Mangal Decoration</a></li>
+              <li><a href="mohan_caterers.html" class="hover:text-blue-400">Mohan Caterers</a></li>
+              <li><a href="" class="hover:text-blue-400">Yash Lawns ,barshi</a></li>
+
+            </ul>
+          </div>
+          <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+            <div>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Connect With Us</h2>
+            </div>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                </path>
+              </svg>
+            </a>
+            <a href="#"
+              class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="bg-indigo-700 py-4 text-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="-mx-4 flex flex-wrap justify-between">
+          <div class="px-4 w-full text-center sm:w-auto sm:text-left">
+            <div class="text-center" style="margin-left: 415px;"> <!-- Centered container -->
+              <p>
+                Copyright © 2024 : The Planning Paradise. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+</html>

@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;1,300&family=Bad+Script&family=Dancing+Script:wght@700&family=Quicksand&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <style>
+        /* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: all 0.4s ease;
+      padding: 15px 20px;
+      background: white;
+      color: #000000;
+      height: 70px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+
+    }
+
+    nav.sticky {
+      padding: 15px 20px;
+      background: white;
+      height: 70px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav .nav-content {
+      height: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo a {
+      font-weight: 500;
+      font-size: 35px;
+      color: #6F4E37;
+      font-family: 'Dancing Script', cursive;
+      font-size: 50px;
+    }
+
+    nav.sticky .logo a {
+      color: #6F4E37;
+    }
+
+    .nav-content .nav-links {
+      display: flex;
+    }
+
+    .nav-content .nav-links li {
+      list-style: none;
+      margin: 0 8px;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 20px;
+      padding: 10px 10px;
+      transition: all 0.3s ease;
+      text-shadow: 1rem;
+    }
+
+    .nav-links .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .nav-links .dropdown-content a {
+      color: #000000;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .nav-links .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .nav-links li:hover .dropdown-content {
+      display: block;
+    }
+
+    .nav-links li a:hover {
+      color: rgb(0, 0, 0);
+    }
+
+    nav.sticky .nav-links li a {
+      color: #000000;
+    }
+
+    nav.sticky .nav-links li a:hover {
+      color: #0E2431;
+    }
+
+    </style>
+</head>
+<body>
+
+  <nav>
+    <div style="z-index: 1000;" class="nav-content">
+      <div class="logo">
+        <a href="#" style="font-family: 'Dancing Script', cursive; margin-left: -20px;">The Planning Paradise </a>
+    </div>
+        <ul class="nav-links" style=" margin-right: 310px; " >
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <div class="dropdown-content">
+                    <!-- <a href="wedding.html">Wedding</a> -->
+                    <a href="decorators.html">Decoration</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="photography.html">Photography</a>
+                </div>
+            </li>
+            <li><a href="venue_main.html">Venue</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+      
+  </nav>
+  <section class="home"></section>
+  <script>
+    let nav = document.querySelector("nav");
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 20) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+    <section class="container">
+        <header>Sign Up</header>
+        <form action="#" class="form">
+          <div class="input-box">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter Full Name" required />
+          </div>
+          <div class="input-box">
+            <label>Email Address</label>
+            <input type="text" placeholder="Enter Email Address" required />
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label>Phone Number</label>
+              <input type="number" placeholder="Enter Phone Number" required />
+            </div>
+            <div class="input-box">
+              <label>Birth Date</label>
+              <input type="date" placeholder="Enter Birth Date" required />
+            </div>
+          </div>
+          
+          <div class="input-box address">
+            <label>Address</label>
+            <input type="text" placeholder="Enter Address" required />
+          
+          <button>Submit</button> <br><br>
+          Already have account ,<a href="signin.html">Signin</a> here .
+        </form>
+      </section>
+</body>
+</html>
